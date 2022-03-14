@@ -76,6 +76,15 @@ console.log(random);
  * > calculateTip(0.15, 33.42) // returns 5.013
  */
 
+function calculateTip() {
+    var bill = prompt("Enter bill amount: ");
+    var tip = prompt("Enter tip percent");
+    var totalWithTip = bill * tip/100;
+    return totalWithTip;
+};
+
+calculateTip();
+
 /**
  * TODO:
  * Use prompt and alert in combination with your calculateTip function to
