@@ -13,11 +13,11 @@ var name = prompt("Please enter your name:");
 function sayHello(name) {
     alert("Hi " + name);
 };
+
 /**
  * TODO:
  * Call the function 'sayHello' and pass your name as a string literal argument.
  * Store the result of the function call in a variable named 'helloMessage'.
- *
  * console.log 'helloMessage' to check your work
  */
 
@@ -103,7 +103,8 @@ calculateTip();
  * TODO:
  * Create a function named `applyDiscount`. This function should accept a price
  * (before a discount is applied), and a discount percentage (a number between 0
- * and 1). It should return the result of applying the discount to the original
+ * and 1).
+ * It should return the result of applying the discount to the original
  * price.
  *
  * Example:
@@ -113,3 +114,12 @@ calculateTip();
  *
  * > applyDiscount(45.99, 0.12) // 40.4712
  */
+
+var originalPrice = prompt("Enter item price:");
+var discountPercent = .3;
+
+function applyDiscount(originalPrice, discountedPercent) {
+    return originalPrice * discountedPercent;
+};
+
+console.log(applyDiscount(originalPrice, discountPercent));
