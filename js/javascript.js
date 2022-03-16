@@ -1,3 +1,4 @@
+
 "use strict";
 
 /**
@@ -8,11 +9,12 @@
  * Example
  * > sayHello("codeup") // returns "Hello, codeup!"
  */
-var name = prompt("Please enter your name:");
 
 function sayHello(name) {
-    alert("Hi " + name);
+     name = "carlos";
+    return "Hello " + name;
 };
+console.log(sayHello(name));
 
 /**
  * TODO:
@@ -54,7 +56,7 @@ var random = Math.floor((Math.random() * 3) + 1);
  * console.log *outside of the function* to check your work (you should see a different result everytime you refresh the page if you are using the random number)*/
 
 function isTwo(num) {
-    if (num == 2) {
+    if (num === 2) {
         alert("The random number was not 2");
     } else {
         alert("The random number is 2");
@@ -119,7 +121,7 @@ var originalPrice = prompt("Enter item price:");
 var discountPercent = .3;
 
 function applyDiscount(originalPrice, discountedPercent) {
-    return originalPrice * discountedPercent;
+    return originalPrice - (originalPrice * discountedPercent);
 };
 
 console.log(applyDiscount(originalPrice, discountPercent));

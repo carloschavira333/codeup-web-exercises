@@ -17,7 +17,20 @@
  * console.logging the function's return value
  */
 
-
+// function analyzeColor(choseColor){
+//     var resultOfCondition = "";
+//
+//     if (choseColor === "blue") {
+//         resultOfCondition = "Blue is the color of the sky";
+//     } else if (choseColor === "red") {
+//         resultOfCondition = "Strawberries are red";
+//     } else if (choseColor === "cyan") {
+//         resultOfCondition = "I don't know anything about cyan";
+//     }
+//     return resultOfCondition;
+// }
+//
+// console.log(analyzeColor("red"));
 
 // Don't change the next two lines!
 // These lines create two variables for you:
@@ -32,10 +45,43 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * You should see a different message every time you refresh the page
  */
 
+// function analyzeColor(randomColor){
+//     var resultOfCondition = "";
+//
+//     if (randomColor === "blue") {
+//         resultOfCondition = "Blue is the color of the sky";
+//     } else if (randomColor === "red") {
+//         resultOfCondition = "Strawberries are red";
+//     } else if (randomColor === "cyan") {
+//         resultOfCondition = "I don't know anything about cyan";
+//     }
+//     return resultOfCondition;
+// }
+//
+// console.log(analyzeColor(randomColor));
+// console.log(randomColor);
 /**
  * TODO:
  * Comment out the code above, and refactor your function to use a switch-case statement
  */
+
+// function analyzeColor(randomColor) {
+//         var resultOfCondition = "";
+//         switch (randomColor) {
+//             case "blue":
+//                 resultOfCondition = "Blue is the color of the sky";
+//                 break;
+//             case "red":
+//                 resultOfCondition = "Strawberries are red";
+//                 break;
+//             case "cyan":
+//                 resultOfCondition = "I don't know anything about cyan";
+//                 break;
+//         }
+//         return resultOfCondition;
+// };
+// console.log(analyzeColor(randomColor));
+// console.log(randomColor);
 
 /**
  * TODO:
@@ -43,6 +89,23 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * user to your `analyzeColor` function. Alert the return value from your
  * function to show it to the user.
  */
+
+// var getUserInput = prompt("Pick a color: red, blue or cyan")
+//
+// function analyzeColor(){
+//     var resultOfCondition = "";
+//
+//     if (getUserInput === "blue") {
+//         resultOfCondition = "Blue is the color of the sky";
+//     } else if (getUserInput === "red") {
+//         resultOfCondition = "Strawberries are red";
+//     } else if (getUserInput === "cyan") {
+//         resultOfCondition = "I don't know anything about cyan";
+//     }
+//     return alert(resultOfCondition);
+// }
+//
+// console.log(analyzeColor(getUserInput));
 
 /* ########################################################################## */
 
@@ -54,7 +117,8 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * the discount is 25%, if it's 3, 35%, if it's 4, 50%, and if it's 5 you'll get
  * everything for free!.
  *
- * Write a function named `calculateTotal` which accepts a lucky number and total
+Write a function named `calculateTotal`
+ * which accepts a lucky number and total
  * amount, and returns the discounted price.
  *
  * Example:
@@ -65,6 +129,28 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * Test your function by passing it various values and checking for the expected
  * return value.
  */
+
+// Write a function named calculateTotal which accepts a
+// lucky number = 0 - 5 random number generator
+// total amount = hardcoded like 50
+// returns the discounted price
+
+var randomCalc = Math.floor(Math.random() * 5) + 1;
+
+function calculateTotal(lNum, tAmount) {
+
+    var luckyNumber = randomCalc;
+    discountedPrice = "";
+
+    if (luckyNumber === 0) {
+       discountedPrice =  tAmount - 0;
+    }
+
+return discountedPrice;
+
+};
+
+console.log(calculateTotal(luckyNumber, 100)); // arguments get passed
 
 /**
  * TODO:
