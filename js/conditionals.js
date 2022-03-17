@@ -130,27 +130,33 @@ Write a function named `calculateTotal`
  * return value.
  */
 
-// Write a function named calculateTotal which accepts a
-// lucky number = 0 - 5 random number generator
-// total amount = hardcoded like 50
-// returns the discounted price
-
-var randomCalc = Math.floor(Math.random() * 5) + 1;
+var randomNum = Math.floor(Math.random() * 5) + 1;
 
 function calculateTotal(lNum, tAmount) {
-
-    var luckyNumber = randomCalc;
-    discountedPrice = "";
-
-    if (luckyNumber === 0) {
-       discountedPrice =  tAmount - 0;
+    var discountedPrice = "";
+    if (lNum === 0) {
+     discountedPrice = tAmount - (tAmount * 0);
+        return discountedPrice;
+    } else if (lNum === 1) {
+        discountedPrice = tAmount - (tAmount * .10);
+        return discountedPrice;
+    } else if (lNum === 2) {
+        discountedPrice = tAmount - (tAmount * .25);
+        return discountedPrice;
+    } else if (lNum === 3) {
+        discountedPrice = tAmount - (tAmount * .35);
+        return discountedPrice;
+    } else if (lNum === 4) {
+        discountedPrice = tAmount - (tAmount * .50);
+        return discountedPrice;
+    } else if (lNum === 5) {
+        discountedPrice = tAmount - tAmount;
+        return discountedPrice;
     }
-
-return discountedPrice;
-
 };
 
-console.log(calculateTotal(luckyNumber, 100)); // arguments get passed
+console.log(calculateTotal(randomNum, 100));
+console.log(randomNum);
 
 /**
  * TODO:
