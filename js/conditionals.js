@@ -167,7 +167,43 @@ console.log(randomNum);
  * price before the discount was, and what their price after the discount is.
  */
 // Generate a random number between 0 and 6
-// var luckyNumber = Math.floor(Math.random() * 6);
+var luckyNumber = Math.floor(Math.random() * 6);
+
+var userinput = prompt("Enter total bill: ");
+var discountedPrice = "";
+
+function calculateTotal(lNum, tAmount) {
+    if (lNum === 0) {
+     discountedPrice = tAmount - (tAmount * 0);
+        // return discountedPrice;
+    } else if (lNum === 1) {
+        discountedPrice = tAmount - (tAmount * .10);
+        // return discountedPrice;
+    } else if (lNum === 2) {
+        discountedPrice = tAmount - (tAmount * .25);
+        // return discountedPrice;
+    } else if (lNum === 3) {
+        discountedPrice = tAmount - (tAmount * .35);
+        // return discountedPrice;
+    } else if (lNum === 4) {
+        discountedPrice = tAmount - (tAmount * .50);
+        // return discountedPrice;
+    } else if (lNum === 5) {
+        discountedPrice = tAmount - tAmount;
+        // return discountedPrice;
+    };
+
+    alertCustomer();
+
+    return discountedPrice;
+
+};
+
+calculateTotal(luckyNumber, userinput);
+
+function alertCustomer() {
+    alert(`You rolled a lucky number of ${luckyNumber} \n Price before discount ${userinput} \n Price after discount ${discountedPrice}`);
+};
 
 /**
  * TODO:
