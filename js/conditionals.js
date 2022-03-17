@@ -130,33 +130,33 @@ Write a function named `calculateTotal`
  * return value.
  */
 
-var randomNum = Math.floor(Math.random() * 5) + 1;
-
-function calculateTotal(lNum, tAmount) {
-    var discountedPrice = "";
-    if (lNum === 0) {
-     discountedPrice = tAmount - (tAmount * 0);
-        return discountedPrice;
-    } else if (lNum === 1) {
-        discountedPrice = tAmount - (tAmount * .10);
-        return discountedPrice;
-    } else if (lNum === 2) {
-        discountedPrice = tAmount - (tAmount * .25);
-        return discountedPrice;
-    } else if (lNum === 3) {
-        discountedPrice = tAmount - (tAmount * .35);
-        return discountedPrice;
-    } else if (lNum === 4) {
-        discountedPrice = tAmount - (tAmount * .50);
-        return discountedPrice;
-    } else if (lNum === 5) {
-        discountedPrice = tAmount - tAmount;
-        return discountedPrice;
-    }
-};
-
-console.log(calculateTotal(randomNum, 100));
-console.log(randomNum);
+// var randomNum = Math.floor(Math.random() * 5) + 1;
+//
+// function calculateTotal(lNum, tAmount) {
+//     var discountedPrice = "";
+//     if (lNum === 0) {
+//      discountedPrice = tAmount - (tAmount * 0);
+//         return discountedPrice;
+//     } else if (lNum === 1) {
+//         discountedPrice = tAmount - (tAmount * .10);
+//         return discountedPrice;
+//     } else if (lNum === 2) {
+//         discountedPrice = tAmount - (tAmount * .25);
+//         return discountedPrice;
+//     } else if (lNum === 3) {
+//         discountedPrice = tAmount - (tAmount * .35);
+//         return discountedPrice;
+//     } else if (lNum === 4) {
+//         discountedPrice = tAmount - (tAmount * .50);
+//         return discountedPrice;
+//     } else if (lNum === 5) {
+//         discountedPrice = tAmount - tAmount;
+//         return discountedPrice;
+//     }
+// };
+//
+// console.log(calculateTotal(randomNum, 100));
+// console.log(randomNum);
 
 /**
  * TODO:
@@ -167,43 +167,43 @@ console.log(randomNum);
  * price before the discount was, and what their price after the discount is.
  */
 // Generate a random number between 0 and 6
-var luckyNumber = Math.floor(Math.random() * 6);
-
-var userinput = prompt("Enter total bill: ");
-var discountedPrice = "";
-
-function calculateTotal(lNum, tAmount) {
-    if (lNum === 0) {
-     discountedPrice = tAmount - (tAmount * 0);
-        // return discountedPrice;
-    } else if (lNum === 1) {
-        discountedPrice = tAmount - (tAmount * .10);
-        // return discountedPrice;
-    } else if (lNum === 2) {
-        discountedPrice = tAmount - (tAmount * .25);
-        // return discountedPrice;
-    } else if (lNum === 3) {
-        discountedPrice = tAmount - (tAmount * .35);
-        // return discountedPrice;
-    } else if (lNum === 4) {
-        discountedPrice = tAmount - (tAmount * .50);
-        // return discountedPrice;
-    } else if (lNum === 5) {
-        discountedPrice = tAmount - tAmount;
-        // return discountedPrice;
-    };
-
-    alertCustomer();
-
-    return discountedPrice;
-
-};
-
-calculateTotal(luckyNumber, userinput);
-
-function alertCustomer() {
-    alert(`You rolled a lucky number of ${luckyNumber} \n Price before discount ${userinput} \n Price after discount ${discountedPrice}`);
-};
+// var luckyNumber = Math.floor(Math.random() * 6);
+//
+// var userinput = prompt("Enter total bill: ");
+// var discountedPrice = "";
+//
+// function calculateTotal(lNum, tAmount) {
+//     if (lNum === 0) {
+//      discountedPrice = tAmount - (tAmount * 0);
+//         // return discountedPrice;
+//     } else if (lNum === 1) {
+//         discountedPrice = tAmount - (tAmount * .10);
+//         // return discountedPrice;
+//     } else if (lNum === 2) {
+//         discountedPrice = tAmount - (tAmount * .25);
+//         // return discountedPrice;
+//     } else if (lNum === 3) {
+//         discountedPrice = tAmount - (tAmount * .35);
+//         // return discountedPrice;
+//     } else if (lNum === 4) {
+//         discountedPrice = tAmount - (tAmount * .50);
+//         // return discountedPrice;
+//     } else if (lNum === 5) {
+//         discountedPrice = tAmount - tAmount;
+//         // return discountedPrice;
+//     };
+//
+//     alertCustomer();
+//
+//     return discountedPrice;
+//
+// };
+//
+// calculateTotal(luckyNumber, userinput);
+//
+// function alertCustomer() {
+//     alert(`You rolled a lucky number of ${luckyNumber} \n Price before discount ${userinput} \n Price after discount ${discountedPrice}`);
+// };
 
 /**
  * TODO:
@@ -223,3 +223,38 @@ function alertCustomer() {
  * Can you refactor your code to use functions?
  * HINT: The way we prompt for a value could be improved
  */
+
+var userConfirm = confirm("Would you like to enter a number?");
+
+if (userConfirm === true) {
+// convert user input to a number
+    var userInput = parseInt(prompt("Ok lets get started. Please enter a number:"));
+    // alert(typeof userInput);
+    if (isNaN(userInput) === false) {
+        if (userInput % 2 == 0) {
+            alert("Number is even");
+        } else {
+            alert("Number is odd");
+        }
+        var plus100 = userInput + 100;
+        alert(plus100);
+
+        if (userInput >= 0) {
+            alert("Number is positive")
+        } else {
+            alert("Number is negative")
+        }
+    } else {
+        alert("You entered something other than a number. \n\n" +
+            "To start over: \n" +
+            "1. Press OK \n" +
+            "2. Refresh page to try again.")
+    }
+} else {
+    alert("Have a nice day!")
+};
+
+
+
+
+
