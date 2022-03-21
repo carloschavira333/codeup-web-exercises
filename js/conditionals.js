@@ -26,11 +26,12 @@
 //         resultOfCondition = "Strawberries are red";
 //     } else if (choseColor === "cyan") {
 //         resultOfCondition = "I don't know anything about cyan";
+//     } else {
+//         resultOfCondition = "Not a color in my list."
 //     }
 //     return resultOfCondition;
-// }
-//
-// console.log(analyzeColor("red"));
+// };
+// console.log(analyzeColor("blue"));
 
 // Don't change the next two lines!
 // These lines create two variables for you:
@@ -54,6 +55,8 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
 //         resultOfCondition = "Strawberries are red";
 //     } else if (randomColor === "cyan") {
 //         resultOfCondition = "I don't know anything about cyan";
+//     } else {
+//         resultOfCondition = "Not a color in my list";
 //     }
 //     return resultOfCondition;
 // }
@@ -65,23 +68,23 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * Comment out the code above, and refactor your function to use a switch-case statement
  */
 
-// function analyzeColor(randomColor) {
-//         var resultOfCondition = "";
-//         switch (randomColor) {
-//             case "blue":
-//                 resultOfCondition = "Blue is the color of the sky";
-//                 break;
-//             case "red":
-//                 resultOfCondition = "Strawberries are red";
-//                 break;
-//             case "cyan":
-//                 resultOfCondition = "I don't know anything about cyan";
-//                 break;
-//         }
-//         return resultOfCondition;
-// };
-// console.log(analyzeColor(randomColor));
-// console.log(randomColor);
+function analyzeColor(chosenColor) {
+        var resultOfCondition = "";
+        switch (chosenColor) {
+            case "blue":
+                resultOfCondition = "Blue is the color of the sky";
+                break;
+            case "red":
+                resultOfCondition = "Strawberries are red";
+                break;
+            case "cyan":
+                resultOfCondition = "I don't know anything about cyan";
+                break;
+        }
+        return resultOfCondition;
+};
+console.log(analyzeColor(randomColor));
+console.log(randomColor);
 
 /**
  * TODO:
@@ -168,8 +171,8 @@ Write a function named `calculateTotal`
  */
 // Generate a random number between 0 and 6
 // var luckyNumber = Math.floor(Math.random() * 6);
-//
 // var userinput = prompt("Enter total bill: ");
+//
 // var discountedPrice = "";
 //
 // function calculateTotal(lNum, tAmount) {
@@ -224,36 +227,67 @@ Write a function named `calculateTotal`
  * HINT: The way we prompt for a value could be improved
  */
 
-var userConfirm = confirm("Would you like to enter a number?");
-
-if (userConfirm === true) {
-// convert user input to a number
-    var userInput = parseInt(prompt("Ok lets get started. Please enter a number:"));
-    // alert(typeof userInput);
-    if (isNaN(userInput) === false) {
-        if (userInput % 2 == 0) {
-            alert("Number is even");
-        } else {
-            alert("Number is odd");
-        }
-        var plus100 = userInput + 100;
-        alert(plus100);
-
-        if (userInput >= 0) {
-            alert("Number is positive")
-        } else {
-            alert("Number is negative")
-        }
-    } else {
-        alert("You entered something other than a number. \n\n" +
-            "To start over: \n" +
-            "1. Press OK \n" +
-            "2. Refresh page to try again.")
-    }
-} else {
-    alert("Have a nice day!")
-};
-
+// var userConfirm = confirm("Would you like to enter a number?");
+//
+// if (userConfirm === true) {
+// // convert user input to a number
+//     var userInput = parseInt(prompt("Ok lets get started. Please enter a number:"));
+//     // alert(typeof userInput);
+//     if (isNaN(userInput) === false) {
+//         if (userInput % 2 == 0) {
+//             alert("Number is even");
+//         } else {
+//             alert("Number is odd");
+//         }
+//         var plus100 = userInput + 100;
+//         alert(plus100);
+//
+//         if (userInput >= 0) {
+//             alert("Number is positive")
+//         } else {
+//             alert("Number is negative")
+//         }
+//     } else {
+//         alert("You entered something other than a number. \n\n" +
+//             "To start over: \n" +
+//             "1. Press OK \n" +
+//             "2. Refresh page to try again.")
+//     }
+// } else {
+//     alert("Have a nice day!")
+// };
+//
+// // Converting the above to a function
+//
+// var userConfirm = confirm("Would you like to enter a number?");
+//
+// if (userConfirm === true) {
+// // convert user input to a number
+//     var userInput = parseInt(prompt("Ok lets get started. Please enter a number:"));
+//     // alert(typeof userInput);
+//     if (isNaN(userInput) === false) {
+//         if (userInput % 2 == 0) {
+//             alert("Number is even");
+//         } else {
+//             alert("Number is odd");
+//         }
+//         var plus100 = userInput + 100;
+//         alert(plus100);
+//
+//         if (userInput >= 0) {
+//             alert("Number is positive")
+//         } else {
+//             alert("Number is negative")
+//         }
+//     } else {
+//         alert("You entered something other than a number. \n\n" +
+//             "To start over: \n" +
+//             "1. Press OK \n" +
+//             "2. Refresh page to try again.")
+//     }
+// } else {
+//     alert("Have a nice day!")
+// };
 
 
 
