@@ -19,9 +19,9 @@ var sideA = 5;
 var sideB = 5;
 var sideC = 5;
 
-function triangle(a, b, c) {
+function triangle2(a, b, c) {
     return a * b * c;
 }
 
-console.log(triangle(sideA, sideB, sideC));
+console.log(triangle2(sideA, sideB, sideC));
 
