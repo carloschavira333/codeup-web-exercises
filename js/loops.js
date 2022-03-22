@@ -25,9 +25,10 @@
 // 199 is odd
 // ...
 
-// randomNum = Math.floor(Math.random()* 30);
-//
+
+
 // for (var x=0; x<=9; x++) {
+//         var randomNum = Math.floor(Math.random());
 //     // console.log(x * randomNum+20)
 //     var xPlusRandom = (x * randomNum+20)
 //
@@ -99,3 +100,12 @@
 for (var i = 100; i > 0; i -= 5) {
         console.log(i)
 }
+
+
+
+
+for (var i = 1; i<=9; i++){
+    console.log((i).repeat(i))}
+
+for (var i = 1; i<=9; i++){
+    console.log((i + ",").repeat(i))}
