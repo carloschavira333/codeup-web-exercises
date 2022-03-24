@@ -29,7 +29,7 @@ console.log(triangle2(sideA, sideB, sideC));*/
 //     example input: [2,4,6,8]
 // expected output: [4,2,8,6];
 
-var numbersArray = [2, 4, 6, 8];
+/*var numbersArray = [2, 4, 6, 8];
 
 function shuffArr() {
     for (var i = numbersArray.length -1; i > 0; i--) {
@@ -40,4 +40,11 @@ function shuffArr() {
     }
     return numbersArray
 }
-console.log(shuffArr())
+console.log(shuffArr())*/
+
+// Return the First Element in an Array
+// Create a function that takes an array containing only numbers and return the first element.
+
+function getFirstValue(){
+
+}
