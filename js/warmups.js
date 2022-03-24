@@ -31,7 +31,7 @@ console.log(triangle2(sideA, sideB, sideC));*/
 
 var numbersArray = [2, 4, 6, 8];
 
-function shuffArr(array) {
+function shuffArr() {
     for (var i = numbersArray.length -1; i > 0; i--) {
         var j = Math.floor(Math.random() * i);
         var temp = numbersArray[i];
