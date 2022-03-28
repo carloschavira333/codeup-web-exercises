@@ -42,9 +42,19 @@ function shuffArr() {
 }
 console.log(shuffArr())*/
 
-// Return the First Element in an Array
-// Create a function that takes an array containing only numbers and return the first element.
+// 1. Return a string in reverse
+// ex. reverseString(‘hello’) === ‘olleh’
+// let reverseString = (str) => {
+//     return //Something
+// };
+// 2. Return true if palindrome and false if not
+//     ex. isPalindrome(‘racecar’) === ‘true’, isPalindrome(‘hello’) == false
+// let isPalindrome = (str) => {
+// };
 
-function getFirstValue(){
-
+function reverseString(string) {
+    return string.split('').reverse().join('')
 }
+console.log(reverseString('Hello'));
+
+
