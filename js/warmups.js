@@ -57,4 +57,35 @@ function reverseString(string) {
 }
 console.log(reverseString('Hello'));
 
+function isPalindrome(a) {
+
+}
+console.log(isPalindrome('hello'))
+
+// objects notes
+var car = {
+    year: 2020,
+    make: "honda",
+    model: "fit",
+    has4Wheels: true,
+    leather: true,
+    wheels: 4,
+    doors: 2,
+    stereo: false,
+    radioStations: [104.5, 95.1,101.1,"wrr", 105.3,"kntu",96.1]
+}
+
+console.log('I drive a ' + car.make + ' and I like to listen to ' + car.radioStations[0] + ' and ' + car.radioStations[1]  +' station.')
+
+/// I drive a _____ and I like to listen to ___ station and ____ station.
+
+// objects notes
+var aboutMe = {
+    birthYear: 1974,
+    firstName: "carlos",
+    returnByear: function () {
+        return this.birthYear + 10;
+    }
+}
+console.log(aboutMe.returnByear());
 
