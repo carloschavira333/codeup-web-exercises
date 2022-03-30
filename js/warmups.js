@@ -52,40 +52,44 @@ console.log(shuffArr())*/
 // let isPalindrome = (str) => {
 // };
 
-function reverseString(string) {
-    return string.split('').reverse().join('')
-}
-console.log(reverseString('Hello'));
+// function reverseString(string) {
+//     return string.split('').reverse().join('')
+// }
+// console.log(reverseString('Hello'));
+//
+// function isPalindrome(a) {
+//
+// }
+// console.log(isPalindrome('hello'))
 
-function isPalindrome(a) {
+////////////////////////////////////////////////////////////
+//1. Create a variable to be used as the max value for the number guessing game.
 
-}
-console.log(isPalindrome('hello'))
+// var max = 5;
 
-// objects notes
-var car = {
-    year: 2020,
-    make: "honda",
-    model: "fit",
-    has4Wheels: true,
-    leather: true,
-    wheels: 4,
-    doors: 2,
-    stereo: false,
-    radioStations: [104.5, 95.1,101.1,"wrr", 105.3,"kntu",96.1]
-}
+// Generate a random number for the solution using Math.random() and Math.floor(). You will also need to add 1 so that the value is returned as 1 - [whatever the set max value is]. You can log this value to the console for the development to see the value as you create the game, then when the game is complete you can comment out this console input.
 
-console.log('I drive a ' + car.make + ' and I like to listen to ' + car.radioStations[0] + ' and ' + car.radioStations[1]  +' station.')
+// var ranNumber = Math.floor(Math.random() * max) + 1;
 
-/// I drive a _____ and I like to listen to ___ station and ____ station.
+// Create a variable that will be used for tracking whether the answer is correct or not and set it to a default Boolean value of false. We can update it to be true if the user guess is a match.
 
-// objects notes
-var aboutMe = {
-    birthYear: 1974,
-    firstName: "carlos",
-    returnByear: function () {
-        return this.birthYear + 10;
+// var correct = false;
+
+// Use a while loop to iterate a prompt that asks the user to enter a number between 1 and 5, and convert the response into a number in order to match the data type of the random number.
+
+
+
+// Inside the while loop, check using a condidtion to see if the prompt value is equal to the solution number. Apply logic such that if the number is correct, you se the status to true and break out of the loop. Provide the player with some feedback as to whether the guess was high or low, and initiate another prompt until the user guesses correctly. In this way we use the loop to keep asking until the solution is correct, and at that point we can stop the iteration of the block of code.
+
+function Book(type, author) {
+    this.type = type;
+    this.author = author;
+    this.getDetails = function () {
+        return this.type + " written by " + this.author;
     }
 }
-console.log(aboutMe.returnByear());
+
+var book = new Book("Fiction", "Peter King");
+
+console.log(book.getDetails());        // => Fiction written by Peter King
 
