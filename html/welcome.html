@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<!--CSS Style Sheet-->
+    <link rel="stylesheet" href="../css/style.css">
     <meta charset="UTF-8">
     <title>Veridian Dynamics!</title>
 </head>
@@ -8,13 +10,25 @@
 <!--Specifications:
 
 ✅ Make sure the text in the tag line below the heading at  the top is properly bolded and italicized.
-
 ✅ The pricing plan at the bottom is a table.
-
 ✅ The link at the bottom of the page should take you to the top of the page when clicked.
+Use semantic elements for the layout.
+*******************Intro to CSS Ex.***********************************
+✅ Use a style attribute to set the font color of the h1 element to red.
+✅ Add a class of "fancy-header" to your h1 element,
+✅ and create an embedded stylesheet and based on the example above.
+✅ What color is the h1 after creating the embedded stylesheet? It remained red
+✅ Remove the style attribute from your h1 and view the page again.
+✅ Create a directory named css in your project. Within this directory, create a file named style.css, and include a link to it in your html document.
+✅ Inside of style.css, copy the above css, but change to font color to purple.
+✅ What color is the h1 after making this change? It stayed blue
+✅ Remove your embedded stylesheet and view the page again.
+✅ What do the above exercises tell you about the precedence of style attributes and embedded and external stylesheets? HTML is giving the more specific styling a higher precedence.
+✅ Remove any style attributes and embedded stylesheets. From this point forward, we will only be working with external stylesheets.
+Finally, commit the changes to your git repository, and push to GitHub.
 
-Use semantic elements for the layout.-->
-<h1>Welcome to Veridian Dyanmics!</h1>
+-->
+<h1 class="fancy-header">Welcome to Veridian Dyanmics!</h1>
 <p>At Veridian Dynamics, <strong>we</strong> solve <em>your</em> problems with <strong><em>technology</em></strong></p>
 
 <hr>
@@ -41,15 +55,13 @@ Use semantic elements for the layout.-->
 
 <hr>
 
-<h1>Company Vision</h1>
+<h1 class="fancy-header">Company Vision</h1>
 <img src="../img/pic1.jpg" alt="">
 <img src="../img/pic2.jpg" alt="">
 <img src="../img/pic3.jpg" alt="">
 <img src="../img/pic4.jpg" alt="">
 
-<h1>Our Product</h1>
-
-
+<h1 class="fancy-header">Our Product</h1>
 
 <table>
     <thead>
@@ -78,7 +90,7 @@ Use semantic elements for the layout.-->
     </tbody>
 </table>
 <br>
-<em>All Products come with our quality gaurantee<sup>TM</sup>.</em>
+<em>All Products come with our quality guarantee<sup>TM</sup>.</em>
 <br>
 <h3><a href="#top">Go to the top of the page.</a>    </h3>
 
