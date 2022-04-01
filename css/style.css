@@ -1,28 +1,30 @@
-h2 {
-    color: white;
-    font-size: 40px;
-}
+/*h2 {*/
+/*    color: white;*/
+/*    font-size: 40px;*/
+/*}*/
 
-.chili-container {
-    background-image: url("../img/bg.png");
-    background-size: contain;
-    width: 500px;
-    padding: 40px;
-    border-radius: 25px;
-}
-.dark-mode {
-    border: 2px solid white;
-    border-radius: 25px;
-    width: 400px;
-    padding: 40px;
-    background: darkred;
-    color: white;
-}
+/*.chili-container {*/
+/*    background-image: url("../img/bg.png");*/
+/*    background-size: contain;*/
+/*    width: 500px;*/
+/*    padding: 40px;*/
+/*    border-radius: 25px;*/
+/*}*/
+/*.dark-mode {*/
+/*    border: 2px solid white;*/
+/*    border-radius: 25px;*/
+/*    width: 400px;*/
+/*    padding: 40px;*/
+/*    background: darkred;*/
+/*    color: white;*/
+/*}*/
 
-img {
-    height: 40px;
-    float: left;
-    padding-top: 30px;
-    padding-right: 20px;
-    margin-bottom: 20px;
-}
+/*img {*/
+/*    height: 40px;*/
+/*    float: left;*/
+/*    padding-top: 30px;*/
+/*    padding-right: 20px;*/
+/*    margin-bottom: 20px;*/
+/*}*/
+
+
