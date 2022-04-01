@@ -81,15 +81,41 @@ console.log(shuffArr())*/
 
 // Inside the while loop, check using a condidtion to see if the prompt value is equal to the solution number. Apply logic such that if the number is correct, you se the status to true and break out of the loop. Provide the player with some feedback as to whether the guess was high or low, and initiate another prompt until the user guesses correctly. In this way we use the loop to keep asking until the solution is correct, and at that point we can stop the iteration of the block of code.
 
-function Book(type, author) {
-    this.type = type;
-    this.author = author;
-    this.getDetails = function () {
-        return this.type + " written by " + this.author;
+// function Book(type, author) {
+//     this.type = type;
+//     this.author = author;
+//     this.getDetails = function () {
+//         return this.type + " written by " + this.author;
+//     }
+// }
+//
+// var book = new Book("Fiction", "Peter King");
+//
+// console.log(book.getDetails());        // => Fiction written by Peter King
+
+
+var library = [
+    {
+        author: 'Bill Gates',
+        title: 'The Road Ahead',
+        readingStatus: true
+    },
+    {
+        author: 'Steve Jobs',
+        title: 'Walter Isaacson',
+        readingStatus: true
+    },
+    {
+        author: 'Suzanne Collins',
+        title:  'Mockingjay: The Final Book of The Hunger Games',
+        readingStatus: false
+    }];
+
+for (var i = 0; i < library.length; i++) {
+    if (library[i].readingStatus === true) {
+        var readingIsTrue = library[i].title;
+        console.log("This title is available", readingIsTrue);
+    } else {
+        console.log("book title not available " + library[i].title);
     }
 }
-
-var book = new Book("Fiction", "Peter King");
-
-console.log(book.getDetails());        // => Fiction written by Peter King
-
