@@ -1,0 +1,178 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    /*border: 1px solid red;*/
+    font-family: sans-serif;
+}
+
+.hidden-on-desktop {
+    display: none;
+}
+
+body {
+    /*border: 1px solid red;*/
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+h1{
+   flex-basis: 60%;
+    padding: 50px 0;
+    justify-content: center;
+    align-items: center;
+}
+
+nav {
+    flex-basis: 40%;
+    padding: 10px 0;
+    justify-content: center;
+    align-self: center;
+}
+
+ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+}
+
+.header-img {
+    width: 900px;
+    margin: 0 auto;
+    z-index: 10;
+}
+
+.header-img img {
+    width: 100%;
+    z-index: 1;
+}
+
+#main {
+    /*display: flex;*/
+    flex-basis: 70%;
+    height: 300px;
+    padding-top: 50px;
+    padding-right: 20px;
+}
+
+.sub-section {
+    /*display: flex;*/
+    padding-top: 50px;
+    flex-basis: 30%;
+}
+
+footer {
+    display: inherit;
+    flex-wrap: wrap;
+    flex: 0 0 100%
+}
+
+p {
+    flex-grow: 8;
+    padding: 50px 0;
+
+}
+
+#social-media-links {
+    display: flex;
+    flex-grow: .5;
+    justify-content: space-around;
+}
+
+@media screen and (max-width:570px) {
+
+    .hidden-on-desktop {
+        display: block;
+        text-align: center;
+        border: 1px solid #cacacb;
+        padding: 10px;
+        background-color: #cafdfe;
+        margin: 10px auto;
+    }
+
+    .alert-info a {
+        text-decoration: none;
+        color: black;
+        font-size: 13px;
+    }
+
+    body {
+        display: block;
+        min-width: 339px;
+        margin: 0 10px;
+    }
+
+    h1{
+        padding: 10px 0;
+        text-align: center;
+        font-size: 50px;
+    }
+
+
+    .header-img {
+       width:100%;
+    }
+
+    img {
+    }
+
+
+    ul {
+        display: block;
+        /*display: flex;*/
+        /*flex-direction: column;*/
+        padding-left: 0;
+    }
+
+    li {
+        text-align: center;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        padding: 10px 0;
+        background-color: lightgray;
+        font-size: 13px;
+    }
+
+    p {
+        padding: 10px 0;
+        font-size: 15px;
+    }
+
+    #main {
+        height: 100%;
+        padding-top: 15px;
+        padding-right: 0;
+    }
+
+    .sub-section {
+        padding-top:15px;
+    }
+
+
+    footer {
+        display: flex;
+        flex-wrap: nowrap;
+        flex: 0 0 50%
+    }
+
+    footer p {
+        font-size: 10px;
+        flex-grow: 1;
+
+    }
+
+    #social-media-links {
+        display: flex;
+        flex-grow: .5;
+        justify-content: space-between;
+        padding-bottom: 25px;
+    }
+
+}
+
+
+
+
+
