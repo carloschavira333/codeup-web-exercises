@@ -149,5 +149,5 @@ function primeNumbers(input) {
     return primes;
 }
 
-console.log(primeNumbers(50))
+console.log(primeNumbers(50));
 
