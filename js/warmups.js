@@ -94,60 +94,62 @@ console.log(shuffArr())*/
 // console.log(book.getDetails());        // => Fiction written by Peter King
 
 
-var library = [
-    {
-        author: 'Bill Gates',
-        title: 'The Road Ahead',
-        readingStatus: true
-    },
-    {
-        author: 'Steve Jobs',
-        title: 'Walter Isaacson',
-        readingStatus: true
-    },
-    {
-        author: 'Suzanne Collins',
-        title:  'Mockingjay: The Final Book of The Hunger Games',
-        readingStatus: false
-    }];
+// var library = [
+//     {
+//         author: 'Bill Gates',
+//         title: 'The Road Ahead',
+//         readingStatus: true
+//     },
+//     {
+//         author: 'Steve Jobs',
+//         title: 'Walter Isaacson',
+//         readingStatus: true
+//     },
+//     {
+//         author: 'Suzanne Collins',
+//         title:  'Mockingjay: The Final Book of The Hunger Games',
+//         readingStatus: false
+//     }];
 
-for (var i = 0; i < library.length; i++) {
-    if (library[i].readingStatus === true) {
-        var readingIsTrue = library[i].title;
-        console.log("This title is available", readingIsTrue);
-    } else {
-        console.log("book title not available " + library[i].title);
-    }
-}
+// for (var i = 0; i < library.length; i++) {
+//     if (library[i].readingStatus === true) {
+//         var readingIsTrue = library[i].title;
+//         console.log("This title is available", readingIsTrue);
+//     } else {
+//         console.log("book title not available " + library[i].title);
+//     }
+// }
 
 
 // Write the code necessary to output the first 50 prime numbers
 // Recommend starting your loop at 1 and ending your loop once you've calcualted 50 primes.
 // https://en.wikipedia.org/wiki/Prime_number
 
-function primeNumbers(input) {
+// function primeNumbers(input) {
 
-    var storage = [];
-    var i;
-    var j;
-    var primes = [];
+//     var storage = [];
+//     var i;
+//     var j;
+//     var primes = [];
 
-    for (i = 2; i <= input; ++i) {
-        if (!storage[i]) {
-            console.log(!storage[i]);
-            primes.push(i);
-            for (j = i << 1; j <= input; j += i) {
-                storage[j] = true;
-                console.log('storage[j]', storage[i])
-            }
-        }
-    }
-    console.log('Storage: Holds the output of the first for loop', storage.length)
-    console.log('Primes: Hold the output of the second for loop', primes.length)
-    console.log(primes)
+//     for (i = 2; i <= input; ++i) {
+//         if (!storage[i]) {
+//             console.log(!storage[i]);
+//             primes.push(i);
+//             for (j = i << 1; j <= input; j += i) {
+//                 storage[j] = true;
+//                 console.log('storage[j]', storage[i])
+//             }
+//         }
+//     }
+//     console.log('Storage: Holds the output of the first for loop', storage.length)
+//     console.log('Primes: Hold the output of the second for loop', primes.length)
+//     console.log(primes)
 
-    return primes;
-}
+//     return primes;
+// }
 
-console.log(primeNumbers(50));
+// console.log(primeNumbers(50));
+
+
 
