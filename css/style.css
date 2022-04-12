@@ -31,14 +31,50 @@
 body {
     background-color: #dbdbdb;
     background-image: url("../img/bgimage.png");
+    background-size: cover;
+    color: white;
+    font-family: 'Roboto';
 }
 .fancy-header {
     text-align: center;
 }
 
-h1  {
-    border-bottom: 2px solid black;
+.tag-line {
+    font-weight: 100;
 }
 
+h1  {
+    border-bottom: 2px solid gray;
+    padding: 10px;
+}
 
+li {
+    list-style: circle;
+}
+
+table, td, th {
+    border: 1px solid white;
+    padding: 5px;
+    font-weight: 100;
+    font-size: 13px;
+    text-align: center;
+}
+
+th {
+    background: white;
+    color: black;
+    font-weight: 700;
+}
+
+a:link {
+    color: blue;
+}
+
+a:visited {
+    color: darkgray;
+}
+
+a:hover {
+    color: lightblue;
+}
 
