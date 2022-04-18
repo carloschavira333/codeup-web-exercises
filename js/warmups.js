@@ -161,10 +161,38 @@ console.log(shuffArr())*/
 // expected output: 
 // [ 1, 2, 3, 4, 5 ]
 
-function twoArrays(arr1, arr2) {
-    var combinedArr = arr1.concat(arr2);
-    var noDupes = [...new Set(combinedArr)]
-    return noDupes;
+// function twoArrays(arr1, arr2) {
+//     var combinedArr = arr1.concat(arr2);
+//     var noDupes = [...new Set(combinedArr)]
+//     return noDupes;
+// }
+
+// console.log(twoArrays([1, 1, 2, 2, 3], [3, 4, 5, 6, 7]))
+
+// Rewrite the following using a for-loop:
+// var i = 20;
+// while (i >= 0) {
+//     console.log(i);
+//     i--;
+// }
+
+var i = 20;
+for (var i = 20; i >=0; i--) {
+    console.log(i);
 }
 
-console.log(twoArrays([1, 1, 2, 2, 3], [3, 4, 5, 6, 7]))
+// 2. Write a function that takes an object (a) as argument and returns an array with all object keys
+// example input: {a:1,b:2,c:3}
+// expected output: ['a','b','c']
+// ------------------------
+// example input:{j:9,i:2,x:3,z:4}
+// expected output: ['j','i','x','z']
+
+const keys = (obj) => {
+    return Object.entries(obj).map(item => item[0]);
+  };
+  
+  const obj = {a: 1, b: 2, c: 3};
+  
+  
+  console.log(keys(obj)); // gives ["a", "b", "c"]
