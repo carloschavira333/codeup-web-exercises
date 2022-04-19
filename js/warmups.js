@@ -168,3 +168,13 @@ function twoArrays(arr1, arr2) {
 }
 
 console.log(twoArrays([1, 1, 2, 2, 3], [3, 4, 5, 6, 7]))
+
+// Reverse a number
+
+function reverseNumber(input) {
+    input = input + "";
+    return input.split('').reverse().join('');
+}
+
+console.log(reverseNumber(489));
+
