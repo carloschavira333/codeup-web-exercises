@@ -1,0 +1,41 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.col-12 {
+    /* border: 1px solid red; */
+    /* display: inline-block; */
+    margin: 2px 0 4px;
+}
+
+.container {
+    margin: 0 auto;
+    /* width: 1080px; */
+}
+
+
+h1, h5 {
+    text-align: center;
+}
+
+.contact-type {
+    display: flex;
+    justify-content: center;
+}
+
+.contact-info {
+    margin-left: 5px;
+    font-size: 13px;
+}
+
+.line {
+    border-bottom: 2px solid #7cb342;
+    margin: 5px 0;
+    width: 100%;
+}
+
+.section-title {
+    color: rgb(0, 183, 255);
+    font-weight: bold;
+    margin-bottom: 5px;
+}

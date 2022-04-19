@@ -152,13 +152,19 @@ console.log(shuffArr())*/
 // console.log(primeNumbers(50));
 
 
-// Self practice
+// Write a function that takes two arrays as arguments
+// Merge both arrays and remove duplicate values
+// Sort the merge result in ascending order
+// Return the resulting array
 
-// Write a JS function that takes in a number and reverses it.
+// example input: [1, 2, 3], [3, 4, 5]
+// expected output: 
+// [ 1, 2, 3, 4, 5 ]
 
-function reverseNumber(input) {
-    input = input + "";
-    return input.split("").reverse().join("");
+function twoArrays(arr1, arr2) {
+    var combinedArr = arr1.concat(arr2);
+    var noDupes = [...new Set(combinedArr)]
+    return noDupes;
 }
 
-console.log(reverseNumber(589))
+console.log(twoArrays([1, 1, 2, 2, 3], [3, 4, 5, 6, 7]))
