@@ -161,20 +161,43 @@ console.log(shuffArr())*/
 // expected output: 
 // [ 1, 2, 3, 4, 5 ]
 
-function twoArrays(arr1, arr2) {
-    var combinedArr = arr1.concat(arr2);
-    var noDupes = [...new Set(combinedArr)]
-    return noDupes;
+// function twoArrays(arr1, arr2) {
+//     var combinedArr = arr1.concat(arr2);
+//     var noDupes = [...new Set(combinedArr)]
+//     return noDupes;
+// }
+//
+// console.log(twoArrays([1, 1, 2, 2, 3], [3, 4, 5, 6, 7]))
+//
+// // Reverse a number
+//
+// function reverseNumber(input) {
+//     input = input + "";
+//     return input.split('').reverse().join('');
+// }
+//
+// console.log(reverseNumber(489));
+
+
+// List the primitive data types in javascript
+
+// There are 7 primitive data types: string, number, bigint, boolean, undefined, symbol, and null.
+
+// Write a function that takes an object as argument
+// Swap the Javascript object's key with its values and return the resulting object
+
+// example input: {z:'a',y:'b',x:'c',w:'d'}
+// expected output: {a:'z',b:'y',c:'x',d:'w'}
+// -------------------------
+//     example input:{2:'a',4:'b',6:'c',8:'d'}
+// expected output: {a:'2',b:'4',c:'6',d:'8'}
+// -------------------------
+
+function swapkeyValue(obj) {
+    var swapped = Object.entries(obj).map(
+        ([key, value]) => [value, key]
+    );
+    return Object.fromEntries(swapped);
 }
 
-console.log(twoArrays([1, 1, 2, 2, 3], [3, 4, 5, 6, 7]))
-
-// Reverse a number
-
-function reverseNumber(input) {
-    input = input + "";
-    return input.split('').reverse().join('');
-}
-
-console.log(reverseNumber(489));
-
+console.log(swapkeyValue({z:'a',y:'b',x:'c',w:'d'}));
