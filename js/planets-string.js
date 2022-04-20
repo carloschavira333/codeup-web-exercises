@@ -26,7 +26,7 @@
      * string, and <li> tags around each planet.
      */
 
-    var result = planetsArray.join('\n')
+    var result = planetsArray.join('\n')// The use of \n was approved by an instructor. The approval was given via slack when another student asked the question if we could use \n instead of br
     console.log(result);
 
 })();
