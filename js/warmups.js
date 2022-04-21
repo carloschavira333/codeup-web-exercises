@@ -193,11 +193,21 @@ console.log(shuffArr())*/
 // expected output: {a:'2',b:'4',c:'6',d:'8'}
 // -------------------------
 
-function swapkeyValue(obj) {
-    var swapped = Object.entries(obj).map(
-        ([key, value]) => [value, key]
-    );
-    return Object.fromEntries(swapped);
-}
+// function swapkeyValue(obj) {
+//     var swapped = Object.entries(obj).map(
+//         ([key, value]) => [value, key]
+//     );
+//     return Object.fromEntries(swapped);
+// }
+//
+// console.log(swapkeyValue({z:'a',y:'b',x:'c',w:'d'}));
 
-console.log(swapkeyValue({z:'a',y:'b',x:'c',w:'d'}));
+
+// Write a function that takes an array of objects and a string as arguments
+// Add a property with key 'continent' and value equal to the string to each of the objects
+// Return the new array of objects
+// Tipp: try not to mutate the original array
+//
+// example input: [{ city: 'Tokyo', country: 'Japan' }, { city: 'Bangkok', country: 'Thailand' }], 'Asia'
+// expected output: [{ city: 'Tokyo', country: 'Japan', continent: 'Asia' }, { city: 'Bangkok', country: 'Thailand', continent: 'Asia' }]
+
