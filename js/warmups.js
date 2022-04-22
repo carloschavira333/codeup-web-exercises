@@ -211,3 +211,54 @@ console.log(shuffArr())*/
 // example input: [{ city: 'Tokyo', country: 'Japan' }, { city: 'Bangkok', country: 'Thailand' }], 'Asia'
 // expected output: [{ city: 'Tokyo', country: 'Japan', continent: 'Asia' }, { city: 'Bangkok', country: 'Thailand', continent: 'Asia' }]
 
+// Write a function that takes an array (a) as argument
+// Extract the first 3 elements of a
+// Return the resulting array
+
+function takeInArray(arr) {
+    // console.log(first3)
+    return arr.slice(0, 3);
+}
+console.log(takeInArray([1, 2, 3, 4, 5]))
+
+// 2.  Write an object that describes which brands own which cereals (you can be creative here) . After the object has been declared …
+// A) add properties and values to the existing object
+// B) re-assign 2 properties’ values
+
+let cerealBrands = [
+    {
+        company: "General Mills",
+        brands: ["Cheerios", "Chex"],
+        socialMedia: 'Facebook'
+    },
+
+    {
+        company: "Kellog's",
+        brands: ["Smart Start", "Corn Flakes"],
+        socialMedia: 'Facebook'
+
+    }
+];
+
+cerealBrands.forEach((element) => {
+    element.boxShape = 'Rectangle'
+    element.priceOfStock = 'Expensive'
+})
+
+for (let obj of cerealBrands) {
+    if(obj.company === "General Mills") {
+        obj.company = 'General Mills Company';
+
+        break;
+    }
+}
+
+for (let obj of cerealBrands) {
+    if(obj.socialMedia === 'Facebook') {
+        obj.company = 'Instagram';
+
+        break;
+    }
+}
+
+console.log(cerealBrands)
