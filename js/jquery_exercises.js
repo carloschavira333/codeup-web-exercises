@@ -48,24 +48,52 @@
 
 // $('.codeup').css({'border' : '1px solid red'});
 
+//**************************************************************
+//**************************************************************
+//**************************************************************
+
 // Element Selectors
 // ✅ 1. Remove your custom jQuery code from previous exercises.
 // ✅ 2. Using jQuery, set the font-size of all li elements to 20px.
 // ✅ 3. Craft selectors that highlight all the h1, p, and li elements.
-//  4. Create a jQuery statement to alert the contents of your h1 element(s).
+// ✅ 4. Create a jQuery statement to alert the contents of your h1 element(s).
 
-$('.li-font').css({'font-size': '20px'});
-
-$('#heading-one').css({'background-color' : 'yellow'});
-$('#paragraph-one').css({'background-color' : 'yellow'});
-$('#div-one').css({'background-color' : 'yellow'});
-
-var headingOne = $('h1').html();
-console.log(headingOne);
-alert(headingOne);
+// $('.li-font').css({'font-size': '20px'});
+//
+// $('#heading-one').css({'background-color' : 'yellow'});
+// $('#paragraph-one').css({'background-color' : 'yellow'});
+// $('#div-one').css({'background-color' : 'yellow'});
+//
+// var headingOne = $('h1').html();
+// console.log(headingOne);
+// alert(headingOne);
 
 // Multiple Selectors
 // ✅ 1. Combine your selectors that highlight all the h1, p, and li elements.
 
-$('#heading-one, #paragraph-one, #div-one').css({'background-color' : 'yellow'});
+// $('#heading-one, #paragraph-one, #div-one').css({'background-color' : 'yellow'});
+
+//**************************************************************
+//**************************************************************
+//**************************************************************
+
+// Mouse Events Exercises
+// ✅ 1. Use the file jquery_exercises.html for these exercises. Commit your changes to GitHub.
+// ✅ 2. Remove your custom jQuery code from previous exercises.
+// ✅ 3. Add jQuery code that will change the background color of an h1 element when clicked.
+// ✅ 4. Make all paragraphs have a font size of 18px when they are double clicked.
+// ✅ 5. Set all li text color to red when the mouse is hovering; reset to black when it is not.
+
+$('#heading-one').click(function () {
+    $(this).css('background-color', 'yellow')
+    })
+    $('p').dblclick(function () {
+        $(this).css('font-size', '18px')
+    });
+    $('li').hover(function () {
+        $(this).css('color', 'red')
+    },
+        function (){
+        $(this).css('color', 'black')
+    });
 
