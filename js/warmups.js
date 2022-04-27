@@ -215,50 +215,74 @@ console.log(shuffArr())*/
 // Extract the first 3 elements of a
 // Return the resulting array
 
-function takeInArray(arr) {
-    // console.log(first3)
-    return arr.slice(0, 3);
-}
-console.log(takeInArray([1, 2, 3, 4, 5]))
+// function takeInArray(arr) {
+//     // console.log(first3)
+//     return arr.slice(0, 3);
+// }
+// console.log(takeInArray([1, 2, 3, 4, 5]))
 
 // 2.  Write an object that describes which brands own which cereals (you can be creative here) . After the object has been declared …
 // A) add properties and values to the existing object
 // B) re-assign 2 properties’ values
+//
+// let cerealBrands = [
+//     {
+//         company: "General Mills",
+//         brands: ["Cheerios", "Chex"],
+//         socialMedia: 'Facebook'
+//     },
+//
+//     {
+//         company: "Kellog's",
+//         brands: ["Smart Start", "Corn Flakes"],
+//         socialMedia: 'Facebook'
+//
+//     }
+// ];
+//
+// cerealBrands.forEach((element) => {
+//     element.boxShape = 'Rectangle'
+//     element.priceOfStock = 'Expensive'
+// })
+//
+// for (let obj of cerealBrands) {
+//     if(obj.company === "General Mills") {
+//         obj.company = 'General Mills Company';
+//
+//         break;
+//     }
+// }
+//
+// for (let obj of cerealBrands) {
+//     if(obj.socialMedia === 'Facebook') {
+//         obj.company = 'Instagram';
+//
+//         break;
+//     }
+// }
+//
+// console.log(cerealBrands)
 
-let cerealBrands = [
-    {
-        company: "General Mills",
-        brands: ["Cheerios", "Chex"],
-        socialMedia: 'Facebook'
-    },
+// Write a function that takes two date instances as argument
+// It should return the number of days that lies between those dates
 
-    {
-        company: "Kellog's",
-        brands: ["Smart Start", "Corn Flakes"],
-        socialMedia: 'Facebook'
+// example input: new Date('2020-06-11'), new Date('2020-06-01')
+// expected output: 10
 
-    }
-];
-
-cerealBrands.forEach((element) => {
-    element.boxShape = 'Rectangle'
-    element.priceOfStock = 'Expensive'
-})
-
-for (let obj of cerealBrands) {
-    if(obj.company === "General Mills") {
-        obj.company = 'General Mills Company';
-
-        break;
-    }
+function dateDiff(d1, d2) {
+    var date1 = new Date(d1);
+    var date2 = new Date(d2);
+var dateSubtraction = date1.getTime() - date2.getTime();
+var diff_in_days = dateSubtraction / (1000 * 3600 * 24);
+return diff_in_days;
 }
+console.log(dateDiff('2020-06-11', '2020-06-01'));
 
-for (let obj of cerealBrands) {
-    if(obj.socialMedia === 'Facebook') {
-        obj.company = 'Instagram';
+// Write a function that takes an array (a) and a number (b) as arguments
+// Sum up all array elements with a value greater than b
+// Return the sum
 
-        break;
-    }
-}
+// example input: [1, 2, 3, 4, 5, 6, 7], 2
+// expected output: 25
 
-console.log(cerealBrands)
+
