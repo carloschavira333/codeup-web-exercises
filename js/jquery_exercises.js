@@ -64,9 +64,9 @@
 // $('#paragraph-one').css({'background-color' : 'yellow'});
 // $('#div-one').css({'background-color' : 'yellow'});
 //
-// var headingOne = $('h1').html();
-// console.log(headingOne);
-// alert(headingOne);
+var headingOne = $('.codeup').html();
+console.log(headingOne);
+alert(headingOne);
 
 // Multiple Selectors
 // ✅ 1. Combine your selectors that highlight all the h1, p, and li elements.
