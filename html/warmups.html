@@ -357,9 +357,13 @@
     // example input: [1,2,3,4,5,6,7,8,9,10],3
     // expected output: [3,6,9]
 
-    function arrNth(arr,  n) {
-
+    //Clone an array
+    function arrayClone(arr) {
+        return arr.slice(0);
+        // return arr;
     }
+
+    console.log(arrayClone([1, 2, [3, 4]]))
 
 
 
