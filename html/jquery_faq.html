@@ -7,7 +7,7 @@
 <body>
 
 <style>
-    dt {font-weight: bold; color: white}
+    dt {font-weight: bold;}
     dd {margin-bottom: 15px;}
     .showHide {visibility: hidden;}
 </style>
@@ -76,9 +76,10 @@
     ////////////////////////////////////////////////////////////
 
     $(document).ready(function() {
-        $('#hide-answers').click(function() {
+        $('#hide-answers').click(function(event) {
+            event.preventDefault();
             $('.invisible').toggleClass('showHide');
-            $('dt').css('background-color', 'black')
+            $('dt').css('background-color', 'yellow')
         });
     });
 
