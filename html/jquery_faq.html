@@ -3,14 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <title>FAQ: NATIONAL PARKS</title>
+    <style>
+        dt {font-weight: bold;}
+        dd {margin-bottom: 15px;}
+        .showHide {visibility: hidden;}
+    </style>
 </head>
 <body>
 
-<style>
-    dt {font-weight: bold;}
-    dd {margin-bottom: 15px;}
-    .showHide {visibility: hidden;}
-</style>
+
 
 <h1>FAQ: NATIONAL PARKS</h1>
 <a href="#" id="hide-answers">Click to show and hide the answers</a>
@@ -46,6 +47,36 @@
     <dd class="invisible">You can view maps on specific park websites or find national park, National Park System, National Trails System, and other maps.
     </dd>
 </dl>
+
+<h3 id="national-parks-heading">National Parks</h3>
+<ul id="national-parks">
+    <li>Arches</li>
+    <li>Badlands</li>
+    <li>Carlsbad Caverns</li>
+    <li>Denali</li>
+    <li>Everglades</li>
+</ul>
+
+<h3>State Parks of Texas</h3>
+<ul id="state-parks-texas">
+    <li>Abilene</li>
+    <li>Big Bend</li>
+    <li>Choke Canyon</li>
+    <li>Davis Mountains</li>
+    <li>Enchanted Rock</li>
+</ul>
+
+<h3>State Parks of Texas (continued)</h3>
+<ul id="state-parks-texas-continued">
+    <li>Abilene</li>
+    <li>Big Bend</li>
+    <li>Choke Canyon</li>
+    <li>Davis Mountains</li>
+    <li>Enchanted Rock</li>
+</ul>
+
+<button id="yellow-bg-btn"> Make last li in each ul yellow background</button>
+
 
 <script src="../js/jquery-2.2.4.js"></script>
 
@@ -83,6 +114,54 @@
         });
     });
 
+    //grab even li's and apply css
+    // $('li').each(function (index) {
+    //     if (index % 2 !== 0) {
+    //         $(this).css('background-color', 'purple')
+    //     }
+    // })
+
+    //grab the first li
+    // $('li').first().css('background-color', 'yellow')
+    //grab the last li
+    // $('li').last().css('background-color', 'yellow')
+    // $('li').css('font-weight', 'bold');
+    // $('#national-parks').children().css('font-weight', 'bold');
+    // $('li').css('background-color', '#FF0');
+    // $('li').parent().css('background-color', '#0F0');
+    // $('#national-parks-heading').next().css('background-color', 'salmon');
+
+    // ✅ Todo: Create a button that, when clicked, makes the last li in each ul have a yellow background.
+
+    // ✅ Todo: When any h3 is clicked, the lis underneath it should be bolded. Use font-weight: bold to achieve this.
+
+    // ✅ Todo: When any list item is clicked, first li of the parent ul should have a font color of blue.
+
+    //Create a button that, when clicked, makes the last li in each ul have a yellow background.
+
+    $('#yellow-bg-btn').on('click', targetLastLi);
+
+    function targetLastLi() {
+        $('ul').each(function () {
+            $(this).children().last().css('background-color', 'yellow')
+        });
+    }
+
+    // When any h3 is clicked, the lis underneath it should be bolded. Use font-weight: bold to achieve this.
+    $(document).ready(function() {
+        $('h3').click(function(event) {
+            event.preventDefault();
+            $(this).next().css('font-weight', 'bold')
+        });
+    });
+    // When any list item is clicked, first li of the parent ul should have a font color of blue.
+    $('ul').each(function () {
+        // console.log('index', index)
+             $('ul').click(function(event) {
+                    event.preventDefault();
+                $(this).children().first().css('color', 'blue')
+        })
+    });
 </script>
 
 </body>
