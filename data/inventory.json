@@ -1,0 +1,57 @@
+[
+    {
+        "title": "Hammer",
+        "quantity": 25,
+        "categories": [
+            "tool"
+        ],
+        "price": 20
+    }, {
+        "title": "Drill",
+        "quantity": 5,
+        "categories": [
+            "tool",
+            "powered"
+        ],
+        "price": 100
+    }, {
+        "title": "Mower",
+        "quantity": 5,
+        "categories": [
+            "tool",
+            "gas",
+            "outdoor"
+        ],
+        "price": 200
+    }, {
+        "title": "Screwdrivers",
+        "quantity": 25,
+        "categories": [
+            "tool"
+        ],
+        "price": 10
+    }, {
+    "title": "2 x 4 x 8 Pine",
+    "quantity": 200,
+    "categories": [
+        "lumber"
+    ],
+    "price": 4.75
+}, {
+    "title": "Interior Paint",
+    "quantity": 25,
+    "categories": [
+        "indoor",
+        "finishing"
+    ],
+    "price": 8
+}, {
+    "title": "Exterior Paint",
+    "quantity": 75,
+    "categories": [
+        "indoor",
+        "finishing"
+    ],
+    "price": 4
+}
+]
