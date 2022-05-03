@@ -369,15 +369,27 @@
     // Remove the first 3 characters of a
     // Return the result
 
-    function string(a) {
-        return a.slice(3)
-    }
-    console.log(string('abcdefg'))
+    // function string(a) {
+    //     return a.slice(3)
+    // }
+    // console.log(string('abcdefg'))
     // example input:'abcdefg'
     // expected result: 'defg'
 
+    // Write a function that takes an object (a) as argument
+    // Return an array with all object keys
+
+    // example input: {a:1,b:2,c:3}
+    // expected output: ['a','b','c']
 
 
+    function takeObject(obj) {
+        // console.log(Object.values(obj))
+        return Object.values(obj)
+
+    }
+
+    console.log(takeObject({a:1, b:2, c:3}))
 </script>
 
 </body>
