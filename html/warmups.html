@@ -383,13 +383,25 @@
     // expected output: ['a','b','c']
 
 
-    function takeObject(obj) {
-        // console.log(Object.values(obj))
-        return Object.values(obj)
+    // function takeObject(obj) {
+    //     // console.log(Object.values(obj))
+    //     return Object.values(obj)
+    //
+    // }
+    //
+    // console.log(takeObject({a:1, b:2, c:3}))
 
+
+    // Check if input is a string
+    function isString(input) {
+        if (input === String(input)) {
+            return true
+        } else {
+            return false
+        }
     }
 
-    console.log(takeObject({a:1, b:2, c:3}))
+    console.log(isString('coffee'))
 </script>
 
 </body>
