@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>First Mapbox Map</title>
+    <!-- Mapbox CSS -->
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet' />
+    <!-- Custom CSS -->
+    <style>
+        #map {
+            /* the width and height may be set to any size */
+            width: 70vw;
+            height: 70vh;
+        }
+    </style>
+</head>
+<body>
+
+<!-- The HTML element that serves as the Mapbox container -->
+<div id='map'></div>
+
+<!-- Mapbox JS -->
+<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
+
+<script src="/js/mapbox-geocoder-utils.js"></script>
+
+<!-- Custom JS -->
+<script>
+
+    var accessToken = 'pk.eyJ1IjoibG5ndG9qcyIsImEiOiJjbDJxbGJ1cTkwMjZzM2NvOTR4N2lmcnhqIn0.4_eZDYgOQPXWt4Df4rtJzw'
+    mapboxgl.accessToken = accessToken;
+
+    const map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/streets-v9',
+        zoom: 13,
+        center: [-98.615440, 29.546290]
+    });
+
+    // The following code will place a marker on my favorite restaurant:
+    // var marker = new mapboxgl.Marker()
+    //     .setLngLat([-98.615440, 29.546290])
+    //     .addTo(map);
+    // // To add a popup to The Alamo marker from above, add the following to your code:
+    // var pizzaPopUp = new mapboxgl.Popup()
+    //     .setHTML("<p>Sapore's Pizza</p>")
+    //
+    // marker.setPopup(pizzaPopUp)
+
+    // the  geocode method from mapbox-geocoder-utils.js
+    // geocode("6422 Babcock Rd, San Antonio, TX 78249", 'pk.eyJ1IjoibG5ndG9qcyIsImEiOiJjbDJxbGJ1cTkwMjZzM2NvOTR4N2lmcnhqIn0.4_eZDYgOQPXWt4Df4rtJzw').then(function(result) {
+    //     console.log(result);
+    //     map.setCenter(result);
+    //     map.setZoom(14);
+    // });
+
+    var foodPlaces = [
+        {
+        address: "6422 Babcock Rd, San Antonio, TX 78249",
+        popupHTML: "<p>DIVE Restaurant & Bar</p>"
+    },
+        {
+        address: "5999 De Zavala Rd, San Antonio, TX 78249",
+        popupHTML: "<p>Thai Bistro & Sushi</p>"
+    },
+        {
+        address: "15900 La Cantera Pkwy, San Antonio, TX 78256",
+        popupHTML: "<p>The Shops at La Cantera</p>"
+        }
+    ];
+
+foodPlaces.forEach(function (places) {
+
+    function placeMarkerAndPopup(info, token, map) {
+        geocode(info.address, token).then(function(coordinates) {
+            var popup = new mapboxgl.Popup()
+                .setHTML(info.popupHTML);
+            var marker = new mapboxgl.Marker()
+                .setLngLat(coordinates)
+                .addTo(map)
+                .setPopup(popup);
+                 // popup.addTo(map);
+        });
+
+    }
+   return  placeMarkerAndPopup(places, accessToken, map);
+
+})
+
+
+</script>
+</body>
+</html>
+
+
+<!-- ✅ Generate a Mapbox API Key using the steps from above-->
+<!-- ✅ Create a new file named mapbox_maps_api.html and add a map using the next steps.-->
+<!-- ✅ Generate a map that shows the city with your favorite restaurant using geocoding.-->
+<!-- ✅ Redraw the map of the above location at zoom levels 5, 15, and 20. Do this by simply changing the value of zoom level where the map properties are initially set and refresh the page to see the changes. Can the zoom be changed programmatically after the initial map is drawn?-->
+<!-- ✅ Create a marker on your map of the exact location of your favorite restaurant set the zoom to allow for best viewing distance.-->
+<!-- ✅ Create a popup with the name of the restaurant.-->
+<!-- ✅ Make sure the info window does not display until the marker has been clicked on.-->
+<!--Refactor your code to display at least three of your favorite restaurants with information about each. Create an array of objects with information about each restaurant to accomplish this. Use a .forEach() loop rather than a for loop.-->
+
