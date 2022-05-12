@@ -48,4 +48,24 @@ let userInput = (githublogin) => {
         })
 }
 
-userInput('carloschavira333')
+userInput('carloschavira333');
+
+
+// Write a function named wait that accepts a number as a parameter, and returns a promise that resolves after the passed number of milliseconds.
+
+
+// Write a function named wait that accepts a number as a parameter
+function wait(number) {
+    // returns a promise
+    return new Promise((resolve) => {
+        // that resolves
+                resolve(()=> {
+                    // after the passed number of milliseconds
+                    setTimeout(number)
+                })
+
+    })
+}
+
+wait(1000).then(() => console.log('You\'ll see this after 1 second'));
+wait(3000).then(() => console.log('You\'ll see this after 3 seconds'));
