@@ -452,17 +452,43 @@
 // [9, 0, -2]
 // [7, 9, 0, -2]
 
-var last =  function(array, n) {
-    if (array == null)
-        return void 0;
-    if (n == null)
-        return array[array.length - 1];
-    return array.slice(Math.max(array.length - n, 0));
-};
+// var last =  function(array, n) {
+//     if (array == null)
+//         return void 0;
+//     if (n == null)
+//         return array[array.length - 1];
+//     return array.slice(Math.max(array.length - n, 0));
+// };
+//
+// console.log(last([7, 9, 0, -2]));
+// console.log(last([7, 9, 0, -2],3));
+// console.log(last([7, 9, 0, -2],6));
 
-console.log(last([7, 9, 0, -2]));
-console.log(last([7, 9, 0, -2],3));
-console.log(last([7, 9, 0, -2],6));
+// 1. Write a function the reverses a string.
+// Javascript does not have a build in String Builder class so you cannot modify an existing string. What we can do is create a list that we push each character from the original string starting from the end.
+//
+// Then we use Array Join to combine the characters as the reversed string.
+//
+// Here is the gist of the code:
+
+    function reverseString(s) {
+        // Create the result list
+        const result = [];
+        // Start from the end of the string and iterate towards the start
+        for (let i = s.length-1; i >= 0; i -= 1) {
+            // Push the current char in the list
+            result.push(s[i]);
+        }
+        // Combine the result in a string
+        return result.join('');
+    }
+
+    // Examples
+    console.log(reverseString(""))
+    console.log(reverseString("abc"))
+    console.log(reverseString("aaabbbcccd"))
+
+
 
 
 
