@@ -84,3 +84,14 @@ function alphabetSoup(string) {
 //
 // 7. create a function named `reverse` that takes in and reverses an array.
 // # regulus-second-js-reassessment-review
+
+
+let originalString;
+let myOutput = `${originalString} is an example of ${description} thinking.`;
+
+let myOutput = '${originalString} is an example of ${description} thinking.'
+
+
+
+const myOutput = `{originalString} is an example of {description} thinking.`;
+
